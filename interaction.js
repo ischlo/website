@@ -9,8 +9,6 @@ function generate_portfolio(name, description, link_git, link_web) {
 
 }
 
-
-
 $(document).ready(function(){
     
     var interests = ['gis','spatial_data','urban_analytics','modelling','cities','circular_economy','sustainability'];
@@ -23,12 +21,6 @@ $(document).ready(function(){
         interests_.append('<code>'+el+'</code>');
     });  
     
-
-
-
-
-
-
   });
 
 

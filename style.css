@@ -108,7 +108,6 @@ i {
     /* background-color: aqua; */
 }
 
-
 .vl {
     position: relative;
     border-left: 1px solid dimgray;
@@ -123,8 +122,6 @@ i {
     align-self: center;
   }
 
-
-
 .about_element{
     width: 30%;
     padding: 10px;
@@ -133,7 +130,6 @@ i {
     -ms-hyphens:     none; 
     hyphens:         none; */
 }
-
 
 .latest{
     width: 50%;
@@ -159,9 +155,7 @@ i {
     
 }
 
-
 /* PROTFOLIO SECTION */
-
 .portfolio_sections_pane{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
