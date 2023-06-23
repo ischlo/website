@@ -1,4 +1,15 @@
 
+function generate_portfolio(name, description, link_git, link_web) { 
+    var portolio_ = $('#portfolio');
+
+    $.each(name, function(id,el){
+        portolio_.append()
+
+    });
+
+}
+
+
 
 $(document).ready(function(){
     
@@ -10,10 +21,14 @@ $(document).ready(function(){
         el = '#'+el;
         // console.log(el);
         interests_.append('<code>'+el+'</code>');
-    });
+    });  
+    
 
-    // $(".blog_embedding").load("https://ischlo.github.io/blog_posts/regex/index.html"); 
-      
+
+
+
+
+
   });
 
 

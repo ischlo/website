@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,20 +8,22 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
     <script src="jquery.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.7.0.js"></script> -->
 </head>
+
 <body>
 
-    <div class="container">
+    <div class="container_main">
 
-        <div class="section" >
+        <div class="section">
             <div class="section_content" id="about">
-                
+
                 <div id="intro_content">
-                    <h4>Hello, my name is Ivann Schlosser</h4>
+                    <h4>Hello, I'm Ivann, welcome to my website. </h4>
                 </div>
                 <!-- <h2>About</h2> -->
                 <br>
@@ -35,13 +38,22 @@
                         <p>Currently based in London, UK.</p>
                     </div>
 
+                    <div class="vl"></div>
+
                     <!--  -->
                     <div id="education" class="about_element">
                         <h3>Education</h3>
-                        <p>BSc in Physics '19' from <a href="https://www.epfl.ch/schools/sb/sph/" target='_blank'><img src="img/2560px-Logo_EPFL.svg.png" alt="epfl_logo" height="17" width="auto"></a></p>
-                        <p>MSc in Smart cities and urban analytics '21 from <a href="https://www.ucl.ac.uk" target='_blank'><img src="img/ucl_logo-2.png" alt="ucl_logo" height="17" width="auto"></a>
-                        at <a href="https://www.ucl.ac.uk/bartlett/casa/bartlett-centre-advanced-spatial-analysis" target='_blank'><img src="img/casa.png" alt="casa_logo" height="45" width="auto"></a>. </p>
+                        <p>BSc in Physics '19' from <a href="https://www.epfl.ch/schools/sb/sph/" target='_blank'><img
+                                    src="img/2560px-Logo_EPFL.svg.png" alt="epfl_logo" height="17" width="auto"></a></p>
+                        <p>MSc in Smart cities and urban analytics '21 from <a href="https://www.ucl.ac.uk"
+                                target='_blank'><img src="img/ucl_logo-2.png" alt="ucl_logo" height="17"
+                                    width="auto"></a>
+                            at <a href="https://www.ucl.ac.uk/bartlett/casa/bartlett-centre-advanced-spatial-analysis"
+                                target='_blank'><img src="img/casa.png" alt="casa_logo" height="45" width="auto"></a>.
+                        </p>
                     </div>
+
+                    <div class="vl"></div>
 
                     <!--  -->
                     <div id="interests" class="about_element">
@@ -49,14 +61,159 @@
                         <!-- <code>#gis</code>
                         <code>#circular_economy</code> -->
                     </div>
-                    
+
+                </div>
+                <div class="latest">
+                    <h3>Currently</h3>
+                    <div id="currently">
+                        
+                        I am doing research on spatial networks at CASA. Mainly devloping methods from open source tools and data sets to model flows in physical networks. I do some deep learning as well in order to 'learn' how different land uses locate in space.
+                    </div>
+                
                 </div>
             </div>
-        
+
         </div>
 
-        <div class="section" id="portfolio"> 
+        <div class="section" id="portfolio">
             <h2>Portfolio</h2>
+            <div class="portfolio_sections_pane">
+                <div class="portfolio_section" id="software">
+                    <!--  -->
+                    <div class="portfolio_section_blurry"></div>
+                    <div class="portfolio_section_title">
+                        <h5>Software</h5>
+                    </div>
+
+                    <!--  -->
+                    <div class="portfolio_section_content">
+                        <div class="portfolio_post">
+                            <h6>cppSim: Large scale commuter flows model</h6>
+                            This is a mini package for doubly constrained spatial interaction models. With a c++ backend, it is very fast and memory efficient.  
+                            <div class="post_image">
+            
+                            </div>
+                            <div class="portfolio_links">
+                                <!-- <a href="">Web</a> -->
+                                <!-- <div class="vl"></div> -->
+                                <a href="http://github.com/ischlo/cppSim"> <i class="bi bi-github"></i> </a>
+                            </div>
+                        </div>
+        
+                        <!--  -->
+                        <div class="portfolio_post">
+                            <h6>Btoolkit</h6>
+                            A package containing supplementary helper functions.
+                            <div class="post_image">
+            
+                            </div>
+                            <div class="portfolio_links">
+                                <!-- <a href="">Web</a> -->
+                                <!-- <div class="vl"></div> -->
+                                <a href="http://github.com/ischlo/Btoolkit"> <i class="bi bi-github"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+                <div class="portfolio_section" id="research_work">
+                    <!--  -->
+                    <div class="portfolio_section_blurry"></div>
+                    <div class="portfolio_section_title">
+                        <h5>Research</h5>
+                    </div>
+                    <!--  -->
+                    <div class="portfolio_section_content">
+                        <div class="portfolio_post">
+                            <h6>Active travel commuting in London</h6>
+                            Research on networks, routing and models for active travel commuting in London
+                            <div class="post_image">
+            
+                            </div>
+                            <div class="portfolio_links">
+                                <!-- <a href="">Web</a> -->
+                                <!-- <div class="vl"></div> -->
+                                <a href="https://github.com/ischlo/quant_cycle_walk"> <i class="bi bi-github"></i> </a>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="portfolio_post">
+                            <h6>Active travel network of Great Britain</h6>
+                            Building distance matrices for active travel journeys across Great Britain.
+                            <div class="post_image">
+            
+                            </div>
+                            <div class="portfolio_links">
+                                <!-- <a href="">Web</a> -->
+                                <!-- <div class="vl"></div> -->
+                                <a href="https://github.com/ischlo/QUANT_at"> <i class="bi bi-github"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="portfolio_section" id="publications">
+                    <!--  -->
+                    <div class="portfolio_section_blurry"></div>
+                    <div class="portfolio_section_title">
+                        <h5>Publications</h5>
+                    </div> 
+                       <!--  -->
+                       <div class="portfolio_section_content">
+
+                       </div>
+                </div>
+                <div class="portfolio_section" id="courseworks">
+                    <!--  -->
+                    <div class="portfolio_section_blurry"></div>
+                    <div class="portfolio_section_title">
+                        <h5>Selected courseworks</h5>
+                    </div>
+                    <!--  -->
+                    <div class="portfolio_section_content">
+                        <div class="portfolio_post">
+                            <h6>Visualizing cultural data sets on the web</h6>
+                            An interactive web app to navigate the MOMA collection through time, geography, colors and more
+                            <div class="post_image">
+            
+                            </div>
+                            <div class="portfolio_links">
+                                <a href="https://ischlo.github.io/Artviz/">Web</a>
+                                <div class="vl_1"></div>
+                                <a href="https://github.com/ischlo/Artviz"> <i class="bi bi-github"></i> </a>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="portfolio_post">
+                            <h6>Waste management in England</h6>
+                            A study on waste flows across England and the circular economy aspects of that industry.
+                            <div class="post_image">
+            
+                            </div>
+                            <div class="portfolio_links">
+                                <!-- <a href="https://ischlo.github.io/Artviz/">Web</a> -->
+                                <!-- <div class="vl"></div> -->
+                                <a href="https://github.com/ischlo/GIS_Waste_Management"> <i class="bi bi-github"></i> </a>
+                            </div>
+                        </div>
+                         <!--  -->
+                        <div class="portfolio_post">
+                            <h6>Msc dissertation: Deconstructing neighbourhoods</h6>
+                            Developing methods to understand the city on a local, neighborhood scale from mobility patterns and distribution of amenities. 
+                            <div class="post_image">
+            
+                            </div>
+                            <div class="portfolio_links">
+                                <a href="https://schlosser.shinyapps.io/neighbourhood_diversity/">Web</a>
+                                <div class="vl_1"></div>
+                                <a href="https://github.com/ischlo/Dissertation_analysis"> <i class="bi bi-github"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+            
         </div>
 
         <!-- BLOG -->
@@ -67,70 +224,70 @@
                     
                 </div> -->
                 <div class="blog_container">
-                    
                     <div id="blog_searchbar">
                         <div id="blurry_background"></div>
                         <input id="blog_searchbar_input" type="text">
                     </div>
-                    
-                    <p>Quite often I try to learn new tools, and have taken the habit of making notes in the process. I try to make these notes readable by anybody and store them in <a href="https://ischlo.github.io/blog/" target="_blank">this blog</a>.</p>
-                    <!-- <div class="blog_post" id="regex">
-                        This blog post covers the use of regular expressions. 
-                    </div> -->
-                    
+                    <p> I keep my notes as rmarkdown and quarto files and try to regularly make them into blog posts, mostly about
+                        intresting technical problems or skills that my research work involves. But also general knowledge about R
+                        programming.<a href="https://ischlo.github.io/blog/"
+                            target="_blank"> <u>Have a look here </u></a>!</p>
                 </div>
             </div>
         </div>
-            
-            
-        
+
+
+
         <!--  Contact -->
         <div class="section" id="contact_section">
-                <div class="section_content" id="contact">
-                    <h2>Contact</h2>
-                    <div class="contact_pane">
+            <div class="section_content" id="contact">
+                <h2>Contact</h2>
+                <div class="contact_pane">
                     <!-- Twitter -->
-                        <div class="contact_link" id="twitter">
-                            <a href="https://twitter.com/irscars" target='_blank'>
-                                <i class="bi bi-twitter"></i>
-                                Twitter
-                            </a>
-                        </div>
-                        <!-- Email -->
-                        <div class="contact_link" id="email">
-                            <a href="mailto:schlosserivann@gmail.com" target="_blank">
-                                <i class="bi bi-envelope"></i>
-                                Email
-                            </a>
-                        </div>
-                        <!-- Linkedin -->
-                        <div class="contact_link" id="email">
-                            <a href="https://www.linkedin.com/in/ivann-schlosser/" target="_blank">
-                                <i class="bi bi-linkedin"></i>
-                                LinkedIn
-                            </a>
-                        </div>
-                        <!-- Github -->
-                        <div class="contact_link" id="email">
-                            <a href="https://www.github.com/ischlo" target="_blank">
-                                <i class="bi bi-github"></i>
-                                Github
-                            </a>
-                        </div>
+                    <div class="contact_link" id="twitter">
+                        <a href="https://twitter.com/irscars" target='_blank'>
+                            <i class="bi bi-twitter"></i>
+                            Twitter
+                        </a>
                     </div>
-                    
+                    <!-- Email -->
+                    <div class="contact_link" id="email">
+                        <a href="mailto:schlosserivann@gmail.com" target="_blank">
+                            <i class="bi bi-envelope"></i>
+                            Email
+                        </a>
+                    </div>
+                    <!-- Linkedin -->
+                    <div class="contact_link" id="email">
+                        <a href="https://www.linkedin.com/in/ivann-schlosser/" target="_blank">
+                            <i class="bi bi-linkedin"></i>
+                            LinkedIn
+                        </a>
+                    </div>
+                    <!-- Github -->
+                    <div class="contact_link" id="email">
+                        <a href="https://www.github.com/ischlo" target="_blank">
+                            <i class="bi bi-github"></i>
+                            Github
+                        </a>
+                    </div>
                 </div>
-                
+
+            </div>
+
         </div>
         <div class="footer">
-            <p>This wesites source code: </p>
-            <p>Copyright:</p>
+            <p>This website's source <u><a href="https://github.com/ischlo/website" target="_blank">code</a></u>.</p>
+            <!-- <p>Copyright:</p> -->
             <p>Year 2023</p>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
     <script src="interaction.js"></script>
 
 </body>
+
 </html>
