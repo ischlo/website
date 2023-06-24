@@ -19,7 +19,14 @@ $(document).ready(function(){
         el = '#'+el;
         // console.log(el);
         interests_.append('<code>'+el+'</code>');
-    });  
+    }); 
+    interests_.append('<h4>But also<h4/>');
+    $.each(also_interests,function(id,el) {
+        el = '#'+el;
+        // console.log(el);
+        interests_.append('<code>'+el+'</code>');
+    }); 
+    
     
   });
 
