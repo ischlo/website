@@ -2,8 +2,9 @@
 
 $(document).ready(function(){
     
-    var interests = ['gis','spatial_data','urban_analytics','modelling','cities','circular_economy','sustainability'];
-    var also_interests = ['physics', 'science', 'music', 'photography', 'architecture']; //, 'cooking'
+    var interests = ['gis','spatial_data','visualization','modelling','R','python'];
+    var also_interests = ['urban_analytics','cities','circular_economy','sustainability'];
+    // ['physics', 'science', 'music', 'photography', 'architecture']; //, 'cooking'
     var interests_ = $('#interests');
 
     // interests_.append('<p>')
@@ -12,7 +13,7 @@ $(document).ready(function(){
         // console.log(el);
         interests_.append('<code>'+el+'</code>');
     }); 
-    interests_.append('<h4>But also <h4/>');
+    interests_.append('<h4>Interests <h4/>');
     $.each(also_interests,function(id,el) {
         el = '#'+el;
         // console.log(el);
