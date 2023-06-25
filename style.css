@@ -18,9 +18,11 @@ body{
 code{
     background-color: rgb(252, 226, 228);
     border-radius: 3px;
-    margin: 1px;
+    margin: 3px;
     padding: 3px;
-    /* white-space:; */
+    /* hyphens: none;
+    -webkit-hyphens: none; */
+    /* white-space: nowrap; */
 }
 
 input {
@@ -69,7 +71,6 @@ input {
     align-items: center;
 }
 
-
 #blog {
     display: flex;
 }
@@ -91,6 +92,17 @@ a {
 i { 
     margin: 3px;
 }
+/* 
+p {
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+    } */
 
 /* ABOUT SECTION */
 
@@ -125,6 +137,7 @@ i {
 .about_element{
     width: 30%;
     padding: 10px;
+    word-break: keep-all;
     /* -webkit-hyphens: none;
     -moz-hyphens:    none;
     -ms-hyphens:     none; 
@@ -140,6 +153,10 @@ i {
     border-bottom: 1px solid dimgrey;
 }
 
+#cv{
+    text-decoration: underline;
+}
+
 #currently {
 
     /* border-left: 1px black solid; */
@@ -152,11 +169,25 @@ i {
 #bio,#education,#interests{
     display: block;
     text-align: center;
+    /* white-space: nowrap; */
+    max-width: 90%;
     
 }
 
+#interests{
+    text-align: center;
+    /* hyphens: none;
+    -webkit-hyphens: none; */
+    word-break: keep-all;
+    /* white-space: nowrap; */
+    max-width: 90%;
+}
+
 /* PROTFOLIO SECTION */
+
 .portfolio_sections_pane{
+    width: 80%;
+    height: 75%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 5px;
@@ -174,7 +205,7 @@ i {
     /* grid-template-columns: repeat(2, 1fr); */
     /* padding: 5px; */
     margin: 5px;
-    background-color:rgb(255, 248, 236);
+    background-color:rgb(255, 251, 245);
     border: 1px solid rgb(63, 37, 141);
     justify-items: center;
 }
@@ -217,7 +248,8 @@ i {
     display: grid;
     /* justify-content: space-evenly; */
     grid-template-columns: 1fr 1fr;
-    column-gap: 3px;
+    grid-template-rows: min-content;
+    column-gap: 1px;
 }
 
 .portfolio_post{
@@ -240,15 +272,14 @@ i {
 } */
 
 .portfolio_links{
-    padding: 5px;
-    display: flex;
-    justify-content: space-between;
-    /* background-color: bisque; */
-    height: auto;
-    width: 40%;
-    /* vertical-align: bottom; */
-    float:right;
+    padding: 3px;
+    height: min-content;
+    text-align: right;
     z-index: 10;
+}
+
+.portfolio_links a:hover {
+    text-decoration: underline;
 }
 
 /* BLOG SECTION */
