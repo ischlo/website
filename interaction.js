@@ -1,13 +1,4 @@
 
-function generate_portfolio(name, description, link_git, link_web) { 
-    var portolio_ = $('#portfolio');
-
-    $.each(name, function(id,el){
-        portolio_.append()
-
-    });
-
-}
 
 $(document).ready(function(){
     
@@ -25,7 +16,7 @@ $(document).ready(function(){
     $.each(also_interests,function(id,el) {
         el = '#'+el;
         // console.log(el);
-        interests_.append('<code>'+el+'</code>');
+        interests_.append('<code>'+el+'</code>'); //+'&nbsp;'
     }); 
     // interests_.append("</p>")
     
@@ -77,7 +68,16 @@ $(document).ready(function(){
   });
 
 
-  // EVENT listener for clicks on the protfolio sections to expand them
 
+
+//   function generate_portfolio(name, description, link_git, link_web) { 
+//     var portolio_ = $('#portfolio');
+
+//     $.each(name, function(id,el){
+//         portolio_.append()
+
+//     });
+
+// }
 
 
