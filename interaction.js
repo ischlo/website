@@ -26,29 +26,40 @@ $(document).ready(function(){
 
     var port_section_tit = $('.portfolio_section_title h5');
 
+    var sections = {
+        'software_tit':'software'
+        ,'research_tit':'research'
+        ,'courseworks_tit':'courseworks'
+    };
+
     // console.log($('.portfolio_sections_pane'));
 
     port_section_tit.click(function(){
         
-        console.log(clicked);
-        
+        // console.log(clicked);
+        // $.each(port_section_tit,function(id,el){
+        //     console.log(sections[el.id]);
+        // });
+
         if(clicked!=null) {
             $.each(port_section_tit,function(id,el){
 
+                // console.log(sections[el.id]);
+
                 $('.portfolio_sections_pane').css('grid-template-columns', '1fr 1fr');
-                $('#'+el.id + '.portfolio_section').animate({
+                $('#'+sections[el.id] + '.portfolio_section').animate({
                         width:'40vw',
                         height:'35vh',
                     },duration = 200);     
 
-                $('#'+el.id + '.portfolio_section').css('border','1px solid rgb(63, 37, 141)');
+                $('#'+sections[el.id] + '.portfolio_section').css('border','1px solid rgb(63, 37, 141)');
                 
             });
             clicked = null;
         } else if(clicked==null) {
         // console.log(port_section_tit);
             clicked = this.id;
-            $('#'+this.id + '.portfolio_section').animate({
+            $('#'+sections[this.id] + '.portfolio_section').animate({
                 width:'70vw',
                 height:'70vh'
             },duration=400);
@@ -56,7 +67,7 @@ $(document).ready(function(){
             $.each(port_section_tit,function(id,el){
                 // port_section.css
                 if(el.id!=clicked){
-                    var other = $('#'+el.id + '.portfolio_section')
+                    var other = $('#'+sections[el.id] + '.portfolio_section')
                     other.animate({
                         width:'0vh',
                         height:'0vh',
@@ -67,18 +78,4 @@ $(document).ready(function(){
         }
     });
   });
-
-
-
-
-//   function generate_portfolio(name, description, link_git, link_web) { 
-//     var portolio_ = $('#portfolio');
-
-//     $.each(name, function(id,el){
-//         portolio_.append()
-
-//     });
-
-// }
-
 
