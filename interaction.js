@@ -50,7 +50,7 @@ $(document).ready(function(){
                 $('#'+sections[el.id] + '.portfolio_section').animate({
                         width:'40vw',
                         height:'35vh',
-                    },duration = 200);     
+                    },duration = 150);     
 
                 $('#'+sections[el.id] + '.portfolio_section').css('border','1px solid rgb(63, 37, 141)');
                 
@@ -62,7 +62,7 @@ $(document).ready(function(){
             $('#'+sections[this.id] + '.portfolio_section').animate({
                 width:'70vw',
                 height:'70vh'
-            },duration=400);
+            },duration=250);
             // $('.portfolio_sections_pane').css('grid-template-columns', '1fr');
             $.each(port_section_tit,function(id,el){
                 // port_section.css
@@ -72,7 +72,7 @@ $(document).ready(function(){
                         width:'0vh',
                         height:'0vh',
                         border:'0'
-                    },duration = 200);      
+                    },duration = 150);      
                 } 
             });    
         }
