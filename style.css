@@ -1,8 +1,5 @@
-
 /* GENERAL */
-
 /* Small devices (portrait tablets and large phones, 600px and up) */
-
 @media only screen and (max-width: 800px) {
     /* .section{
         display: grid;
@@ -14,7 +11,7 @@
 
     .vl{
         height: 0;
-        width: 50px;
+        width: 10px;
     }
 
     #portfolio{
@@ -22,8 +19,6 @@
 
     }
 } 
-
-
 
 
 * {
@@ -263,6 +258,9 @@ i {
     margin: 0;
 }
 
+.arxive{
+    color: darkred;
+}
 
 .portfolio_links{
     padding: 3px;

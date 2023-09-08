@@ -30,6 +30,7 @@ $(document).ready(function(){
         'software_tit':'software'
         ,'research_tit':'research'
         ,'courseworks_tit':'courseworks'
+        ,'publications_tit':'publications'
     };
 
     // console.log($('.portfolio_sections_pane'));
