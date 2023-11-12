@@ -131,7 +131,19 @@ i {
     align-self: center;
   }
 
-  .vl_1 {
+.hl {
+    position: relative;
+    border-top: 1px solid dimgray;
+    width: 30px;
+    align-self: center;
+  }
+
+hr {
+    width: 30px;
+    align-self: center;
+}
+
+.vl_1 {
     position: relative;
     border-left: 1px solid dimgray;
     height: 10px;
@@ -284,12 +296,31 @@ i {
 }
 
 
-/* BLOG SECTION */
+
+/* BLOG & NEWS SECTION */
+
+
+.news_container{
+    background-color: transparent;
+    border-top: 1px solid black;
+    overflow: scroll;
+    height: 50vh;
+    width: 33vw;
+    margin: 20px;
+    padding: 10px;
+    align-content: center;
+}
+
+.youtube_video {
+    width: max-content;
+}
+
+
 .blog_container{
     background-color: transparent;
     border-top: 1px solid black;
     height: auto;
-    width: 40vw;
+    width: 33vw;
     margin: 20px;
     padding: 10px;
     align-content: center;
