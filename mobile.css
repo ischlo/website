@@ -6,12 +6,20 @@
         align-items: center !important;
         overflow: scroll !important;
     }
-    .section_content, .portfolio_sections_pane, .about_pane, .latest {
+    .section_content, .portfolio_sections_pane, .about_pane {
       display: flex !important;
       flex-direction: column !important;
       align-items: center !important;
       width: 100vw !important;
     }
+
+    .latest {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        height: auto !important;
+    }
+
     .vl {
         position: relative;
         border-top: 1px solid dimgray;
@@ -23,13 +31,14 @@
 
     #intro_content{
         position: relative;
-        height: 50px;
+        /* height: 50px; */
         background-color:turquoise;
         width: 80vw !important;
     }
 
     .about_element, .portfolio_section, .news_container, .blog_container {
         width: 80vw !important;
+        height: auto !important;
         /* padding: 10px; */
     }
     
