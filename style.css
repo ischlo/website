@@ -124,6 +124,13 @@ i {
     width: 90%;
 }
 
+.latest { 
+    position: relative;
+    display:flex;
+    width: 80vw;
+    margin: 0;
+}
+
 .vl {
     position: relative;
     border-left: 1px solid dimgray;

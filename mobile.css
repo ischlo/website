@@ -1,0 +1,36 @@
+
+@media(max-width: 700px) {
+    .section {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        overflow: scroll !important;
+    }
+    .section_content, .portfolio_sections_pane, .about_pane, .latest {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      width: 100vw !important;
+    }
+    .vl {
+        position: relative;
+        border-top: 1px solid dimgray;
+        border-left: 0px !important;
+        width: 30px;
+        height: 10px;
+        align-self: center;
+    }
+
+    #intro_content{
+        position: relative;
+        height: 50px;
+        background-color:turquoise;
+        width: 80vw !important;
+    }
+
+    .about_element, .portfolio_section, .news_container, .blog_container {
+        width: 80vw !important;
+        /* padding: 10px; */
+    }
+    
+}
