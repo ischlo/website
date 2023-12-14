@@ -4,13 +4,16 @@
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
-        overflow: scroll !important;
+        overflow-y: scroll !important;
+        height: 150vh;
+        scroll-snap-align: none;
     }
     .section_content, .portfolio_sections_pane, .about_pane {
       display: flex !important;
       flex-direction: column !important;
       align-items: center !important;
       width: 100vw !important;
+      /* overflow-y: scroll; */
     }
 
     .latest {
@@ -39,7 +42,20 @@
     .about_element, .portfolio_section, .news_container, .blog_container {
         width: 80vw !important;
         height: auto !important;
+        scroll-snap-align: center;
         /* padding: 10px; */
     }
-    
+
+}
+
+
+@media(max-height: 600px) {
+    .section {
+        /* display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important; */
+        overflow-y: scroll !important;
+        height: 200vh;
+    }
+
 }

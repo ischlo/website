@@ -5,19 +5,7 @@
         display: grid;
     } */
 
-    .about_pane{
-        display: block;
-    }
-
-    .vl{
-        height: 0;
-        width: 10px;
-    }
-
-    #portfolio{
-        display: grid;
-
-    }
+    
 } 
 
 
@@ -41,7 +29,8 @@ code{
     border-radius: 3px;
     margin: 3px;
     padding: 2px;
-    word-break: keep-all;
+    /* word-break: inherit; */
+    word-wrap: normal;
 }
 
 input {
@@ -157,13 +146,13 @@ hr {
 }
 
 .latest{
-    width: 60vw;
+    /* width: 40vw; */
     display: flex;
     /* justify-content: space-evenly; */
     border-top: 1px solid dimgrey;
     border-bottom: 1px solid dimgrey;
     align-items: center;
-    margin: 10px 20% 10px 20%;
+    margin: 10px 30% 10px 30%;
     
 }
 
