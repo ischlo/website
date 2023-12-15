@@ -29,7 +29,8 @@ code{
     border-radius: 3px;
     margin: 3px;
     padding: 2px;
-    /* word-break: inherit; */
+    word-break: keep-all;
+    /* white-space: pre; */
     word-wrap: normal;
 }
 

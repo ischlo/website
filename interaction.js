@@ -2,8 +2,9 @@
 
 $(document).ready(function(){
     
+    // console.log(window.width);
     var interests = ['gis','spatial_data','visualization','modelling','R','python'];
-    var also_interests = ['urban_analytics','cities','circular_economy','sustainability'];
+    var also_interests = ['networks','urban_analytics','cities','circular_economy','sustainability'];
     // ['physics', 'science', 'music', 'photography', 'architecture']; //, 'cooking'
     var interests_ = $('#interests');
 
@@ -48,11 +49,20 @@ $(document).ready(function(){
                 // console.log(sections[el.id]);
 
                 $('.portfolio_sections_pane').css('grid-template-columns', '1fr 1fr');
-                $('#'+sections[el.id] + '.portfolio_section').animate({
-                        width:'40vw',
+                
+                if (screen.width<700) {
+                    $('#'+sections[el.id] + '.portfolio_section').animate({
+                        width:'80vw',
                         height:'35vh',
                     },duration = 150);     
+                } else {
+                    $('#'+sections[el.id] + '.portfolio_section').animate({
+                        width:'40vw',
+                        height:'35vh',
+                    },duration = 150);  
+                }
 
+                
                 $('#'+sections[el.id] + '.portfolio_section').css('border','1px solid rgb(63, 37, 141)');
                 
             });
@@ -60,10 +70,19 @@ $(document).ready(function(){
         } else if(clicked==null) {
         // console.log(port_section_tit);
             clicked = this.id;
-            $('#'+sections[this.id] + '.portfolio_section').animate({
-                width:'70vw',
-                height:'70vh'
-            },duration=250);
+
+            if (screen.width<700) {
+                $('#'+sections[this.id] + '.portfolio_section').animate({
+                    width:'80vw',
+                    height:'70vh'
+                },duration=250);
+            } else {
+                $('#'+sections[this.id] + '.portfolio_section').animate({
+                    width:'70vw',
+                    height:'70vh'
+                },duration=250);
+            }
+            
             // $('.portfolio_sections_pane').css('grid-template-columns', '1fr');
             $.each(port_section_tit,function(id,el){
                 // port_section.css
