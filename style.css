@@ -1,13 +1,5 @@
 /* GENERAL */
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 800px) {
-    /* .section{
-        display: grid;
-    } */
-
-    
-} 
-
 
 * {
     font-family: 'Courier New', Courier, Helvetica, 'Andale Mono', Verdana, sans-serif;

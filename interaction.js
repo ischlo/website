@@ -52,7 +52,7 @@ $(document).ready(function(){
 
                 $('.portfolio_sections_pane').css('grid-template-columns', '1fr 1fr');
                 
-                if (screen_ratio<1) {
+                if (screen_ratio<=1 && screen.innerWidth < 700) {
                     $('#'+sections[el.id] + '.portfolio_section').animate({
                         width:'80vw',
                         height:'35vh',
@@ -73,7 +73,7 @@ $(document).ready(function(){
         // console.log(port_section_tit);
             clicked = this.id;
 
-            if (screen_ratio<=1) {
+            if (screen_ratio<=1 && screen.innerWidth < 700) {
                 $('#'+sections[this.id] + '.portfolio_section').animate({
                     width:'80vw',
                     height:'70vh'

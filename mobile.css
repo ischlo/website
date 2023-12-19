@@ -40,7 +40,7 @@
     }
 
     .about_element, .portfolio_section, .news_container, .blog_container {
-        width: 80vw;
+        width: 80vw !important;
         /* height: auto !important; */
         scroll-snap-align: start;
         /* padding: 10px; */
