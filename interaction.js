@@ -2,6 +2,8 @@
 
 $(document).ready(function(){
     
+
+    var screen_ratio = screen.width/screen.height
     // console.log(window.width);
     var interests = ['gis','spatial_data','visualization','modelling','R','python'];
     var also_interests = ['networks','urban_analytics','cities','circular_economy','sustainability'];
@@ -18,7 +20,7 @@ $(document).ready(function(){
     $.each(also_interests,function(id,el) {
         el = '#'+el;
         // console.log(el);
-        interests_.append('<code>'+el+'</code>'); //+'&nbsp;'
+        interests_.append('<code style="word-break: keep-all; word-wrap: normal;" >'+el+'</code>'); //+'&nbsp;'
     }); 
     // interests_.append("</p>")
     
@@ -50,7 +52,7 @@ $(document).ready(function(){
 
                 $('.portfolio_sections_pane').css('grid-template-columns', '1fr 1fr');
                 
-                if (screen.width<700) {
+                if (screen_ratio<1) {
                     $('#'+sections[el.id] + '.portfolio_section').animate({
                         width:'80vw',
                         height:'35vh',
@@ -71,7 +73,7 @@ $(document).ready(function(){
         // console.log(port_section_tit);
             clicked = this.id;
 
-            if (screen.width<700) {
+            if (screen_ratio<=1) {
                 $('#'+sections[this.id] + '.portfolio_section').animate({
                     width:'80vw',
                     height:'70vh'

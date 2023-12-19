@@ -42,7 +42,7 @@
     .about_element, .portfolio_section, .news_container, .blog_container {
         width: 80vw;
         /* height: auto !important; */
-        scroll-snap-align: center;
+        scroll-snap-align: start;
         /* padding: 10px; */
     }
 
