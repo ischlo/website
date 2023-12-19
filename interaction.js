@@ -2,8 +2,8 @@
 
 $(document).ready(function(){
     
-
-    var screen_ratio = screen.width/screen.height
+    // console.log(window.innerHeight);
+    var screen_ratio = window.innerWidth/window.innerHeight
     // console.log(window.width);
     var interests = ['gis','spatial_data','visualization','modelling','R','python'];
     var also_interests = ['networks','urban_analytics','cities','circular_economy','sustainability'];
