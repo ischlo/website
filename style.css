@@ -118,7 +118,7 @@ i {
     position: relative;
     border-top: 1px solid dimgray;
     width: 30px;
-    /* align-self: center; */
+    align-self: center;
   }
 
 hr {
@@ -286,15 +286,15 @@ hr {
 
 
 .news_container{
-    /* display:grid; */
+    display: grid;
     background-color: transparent;
     border-top: 1px solid black;
     overflow: scroll;
-    height: 50vh;
+    height: 70vh;
     width: 33vw;
     margin: 20px;
     padding: 10px;
-    /* align-content: center; */
+    align-content: center;
     justify-items: center;
 }
 
