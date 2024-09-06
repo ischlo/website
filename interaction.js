@@ -5,27 +5,25 @@ $(document).ready(function(){
     // console.log(window.innerHeight);
     var screen_ratio = window.innerWidth/window.innerHeight
     // console.log(window.width);
-    var interests = ['gis','spatial_data','visualization','modelling','R','python'];
+    var interests = ['gis','spatial_data','visualization','modelling','rstats','python'];
     var also_interests = ['networks','urban_analytics','cities','circular_economy','sustainability'];
     // ['physics', 'science', 'music', 'photography', 'architecture']; //, 'cooking'
+    
     var interests_ = $('#interests');
 
-    // interests_.append('<p>')
     $.each(interests,function(id,el) {
         el = '#'+el;
-        // console.log(el);
-        interests_.append('<code>'+el+'</code>');
+        interests_.append('<span class="interest_element">' + el + "</span>");
     }); 
-    interests_.append('<h4>Interests <h4/>');
+    
+    interests_.append('<h4>Interests </h4>');
+
     $.each(also_interests,function(id,el) {
         el = '#'+el;
-        // console.log(el);
-        interests_.append('<code style="word-break: keep-all; word-wrap: normal;" >'+el+'</code>'); //+'&nbsp;'
+        interests_.append('<span class="interest_element">'+el+'</span>');
     }); 
-    // interests_.append("</p>")
-    
+
     var clicked=null;
-    // console.log(clicked);
 
     var port_section_tit = $('.portfolio_section_title h5');
 

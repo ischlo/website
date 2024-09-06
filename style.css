@@ -15,15 +15,15 @@ body{
     margin: 0; */
 }
 
-code{
+span{
+    display:inline-block;
     background-color: #f9f2f4;
     color:#c7254e;
     border-radius: 3px;
-    margin: 3px;
+    margin: 2px 3px 2px 3px;
     padding: 2px;
-    word-break: keep-all;
-    /* white-space: pre; */
-    word-wrap: normal;
+    white-space: normal;
+    /* word-break: keep-all; */
 }
 
 input {
@@ -34,6 +34,7 @@ input {
 .container_main {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
+    overflow-x: hidden;
     max-width: 100%;
     height: 100vh;
     width: 100vw;
@@ -54,7 +55,9 @@ input {
 }
 
 .section_content{
-    width: auto;
+    width: 100vw;
+    /* align-items: center; */
+    justify-content: center;
     /* height: auto; */
     /* display: block; */
 }
@@ -162,16 +165,20 @@ hr {
     text-align: center;
 }
 
-#bio,#education,#interests{
+#bio, #education,#interests{
+    display:block;
+    word-wrap: normal;
+    text-align: center;
+    max-width: 90%;
+    word-break: keep-all;
+}
+
+/* #interests{
     display: block;
     text-align: center;
     max-width: 90%;
-    
-}
-
-#interests{
-    text-align: center;
-}
+    word-break: keep-all;
+} */
 
 /* PROTFOLIO SECTION */
 
@@ -189,7 +196,8 @@ hr {
     width: 40vw;
     position: relative;
     height: 35vh;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     margin: 5px;
     background-color:rgb(255, 251, 245);
     border: 1px solid rgb(63, 37, 141);
@@ -201,15 +209,14 @@ hr {
 }
 
 #portfolio_title{
-    margin: 3px;
+    margin: 5px;
 }
 
 .portfolio_section_blurry {
-    display: none;
-    width: 100%;
-    height: 10%;
-    top: 0;
-    background-color: rgb(252, 230, 192);
+    width: 120%;
+    height: 20%;
+    top: -10%;
+    background-color: rgb(255, 251, 245);
     position: -webkit-sticky;
     position: sticky;
     filter: blur(5px);
@@ -223,8 +230,8 @@ hr {
     height: 10%;
     top: 0;
     opacity: 1;
+    position:sticky;
     position: -webkit-sticky;
-    position: sticky;
     background-color: transparent;
     padding: 3px;
     z-index: 11;
@@ -234,9 +241,11 @@ hr {
     width: 100%;
     height: 100%;
     display: grid;
+    align-items:flex-start;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content;
     column-gap: 1px;
+    z-index: 9;
 }
 
 .portfolio_post{
@@ -283,15 +292,13 @@ hr {
 
 
 /* BLOG & NEWS SECTION */
-
-
 .news_container{
     display: grid;
     background-color: transparent;
     border-top: 1px solid black;
-    overflow: scroll;
+    overflow-y: scroll;
     height: 70vh;
-    width: 33vw;
+    width: 40vw;
     margin: 20px;
     padding: 10px;
     align-content: center;
@@ -299,8 +306,9 @@ hr {
 }
 
 .news_post {
-    padding: 10px;
+    margin: 10px;
     height: auto;
+    justify-items: center;
 }
 
 .youtube_video {
@@ -311,7 +319,7 @@ hr {
     background-color: transparent;
     border-top: 1px solid black;
     height: auto;
-    width: 33vw;
+    width: 40vw;
     margin: 20px;
     padding: 10px;
     align-content: center;
