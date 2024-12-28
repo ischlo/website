@@ -145,8 +145,8 @@ hr {
     /* width: 40vw; */
     display: flex;
     /* justify-content: space-evenly; */
-    border-top: 1px solid dimgrey;
-    border-bottom: 1px solid dimgrey;
+    /* border-top: 1px solid dimgrey;
+    border-bottom: 1px solid dimgrey; */
     align-items: center;
     margin: 10px 30% 10px 30%;
     
@@ -199,7 +199,7 @@ hr {
     overflow-y: scroll;
     overflow-x: hidden;
     margin: 5px;
-    background-color:rgb(255, 251, 245);
+    background-color:rgb(255, 251, 250);
     border: 1px solid rgb(63, 37, 141);
     justify-items: center;
 }
@@ -214,18 +214,20 @@ hr {
 
 .portfolio_section_blurry {
     width: 120%;
-    height: 20%;
-    top: -10%;
-    background-color: rgb(255, 251, 245);
+    height: 60px;
+    top: -5%;
+    background-color: rgb(255, 251, 250);
     position: -webkit-sticky;
     position: sticky;
-    filter: blur(5px);
+    filter: blur(10px);
     -webkit-filter: blur(5px);
     opacity: 1;
     z-index: 10;
 }
 
 .portfolio_section_title{
+    display: flex;
+    justify-content: center;
     width: auto;
     height: 10%;
     top: 0;
@@ -292,6 +294,7 @@ hr {
 
 
 /* BLOG & NEWS SECTION */
+
 .news_container{
     display: grid;
     background-color: transparent;
@@ -301,7 +304,6 @@ hr {
     width: 40vw;
     margin: 20px;
     padding: 10px;
-    align-content: center;
     justify-items: center;
 }
 
