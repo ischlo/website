@@ -1,91 +1,93 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const screenRatio = window.innerWidth / window.innerHeight;
 
+  const interests = ['gis', 'spatial_data', 'visualisation', 'ml', 'bayesian','statistics', 'modelling', 'rstats', 'python', 'sql'];
+  const alsoInterests = ['networks', 'urban_analytics', 'cities', 'economics', 'risk', 'sustainability'];
 
-$(document).ready(function(){
-    
-    var screen_ratio = window.innerWidth/window.innerHeight
-    
-    var interests = ['gis', 'spatial_data', 'visualisation', 'modelling', 'rstats', 'python'];
-    var also_interests = ['networks','urban_analytics','cities','circular_economy','sustainability'];
-    
-    // ['physics', 'science', 'music', 'photography', 'architecture']; //, 'cooking'
-    
-    var interests_ = $('#interests');
+  const interestsEl = document.querySelector('#interests');
+  if (interestsEl) {
+    const makeTag = (tag) => {
+      const a = document.createElement('a');
+      a.href = `https://ischlo.github.io/blog/#category=${encodeURIComponent(tag)}`;
+      a.target = '_blank';
 
-    $.each(interests,function(id,el) {
-        el_tag = '#'+el;
-        interests_.append('<a href="https://ischlo.github.io/blog/#category='+el+'" target="_blank"> <span class="interest_element">' + el_tag + "</span> </a>");
-    }); 
-    
-    interests_.append('<h4>Interests </h4>');
+      const span = document.createElement('span');
+      span.className = 'interest_element';
+      span.textContent = `#${tag}`;
 
-    $.each(also_interests,function(id,el) {
-        el_tag = '#'+el;
-        interests_.append('<a href="https://ischlo.github.io/blog/#category='+el+'" target="_blank"> <span class="interest_element">'+el_tag+'</span> </a>');
-    }); 
-
-    var clicked=null;
-
-    var port_section_tit = $('.portfolio_section_title h5');
-
-    var sections = {
-        'software_tit':'software'
-        ,'research_tit':'research'
-        ,'courseworks_tit':'courseworks'
-        ,'publications_tit':'publications'
+      a.appendChild(span);
+      return a;
     };
 
-    port_section_tit.click(function(){
-   
-        if(clicked!=null) {
-            $.each(port_section_tit,function(id,el){
+    interests.forEach((t) => interestsEl.appendChild(makeTag(t)));
 
-                $('.portfolio_sections_pane').css('grid-template-columns', '1fr 1fr');
-                
-                if (screen_ratio<=1 && screen.innerWidth < 700) {
-                    $('#'+sections[el.id] + '.portfolio_section').animate({
-                        width:'80vw',
-                        height:'35vh',
-                    },duration = 150);     
-                } else {
-                    $('#'+sections[el.id] + '.portfolio_section').animate({
-                        width:'40vw',
-                        height:'35vh',
-                    },duration = 150);  
-                }
+    const h4 = document.createElement('h4');
+    h4.textContent = 'Interests ';
+    interestsEl.appendChild(h4);
 
-                
-                $('#'+sections[el.id] + '.portfolio_section').css('border','1px solid rgb(63, 37, 141)');
-                
-            });
-            clicked = null;
-        } else if(clicked==null) {
+    alsoInterests.forEach((t) => interestsEl.appendChild(makeTag(t)));
+  }
 
-            clicked = this.id;
+  let clicked = null;
+  const portSectionTitles = Array.from(document.querySelectorAll('.portfolio_section_title h5'));
+  const sections = {
+    software_tit: 'software',
+    research_tit: 'research',
+    courseworks_tit: 'courseworks',
+    publications_tit: 'publications',
+  };
 
-            if (screen_ratio<=1 && screen.innerWidth < 700) {
-                $('#'+sections[this.id] + '.portfolio_section').animate({
-                    width:'80vw',
-                    height:'70vh'
-                },duration=250);
-            } else {
-                $('#'+sections[this.id] + '.portfolio_section').animate({
-                    width:'70vw',
-                    height:'70vh'
-                },duration=250);
-            }
-            
-            $.each(port_section_tit,function(id,el){
+  const pane = document.querySelector('.portfolio_sections_pane');
 
-                if(el.id!=clicked){
-                    var other = $('#'+sections[el.id] + '.portfolio_section')
-                    other.animate({
-                        width:'0vh',
-                        height:'0vh',
-                        border:'0'
-                    },duration = 150);      
-                } 
-            });    
-        }
+  const applySize = (sectionId, { width, height, border }) => {
+    const el = document.querySelector(`#${sectionId}.portfolio_section`);
+    if (!el) return;
+    el.style.width = width;
+    el.style.height = height;
+    el.style.border = border ?? '1px solid rgb(63, 37, 141)';
+  };
+
+  const isMobile = () => screenRatio <= 1 && window.innerWidth < 700;
+
+  const resetAll = () => {
+    if (pane) pane.style.gridTemplateColumns = '1fr 1fr';
+    portSectionTitles.forEach((h5) => {
+      const sectionId = sections[h5.id];
+      if (!sectionId) return;
+      if (isMobile()) {
+        applySize(sectionId, { width: '80vw', height: '35vh', border: '1px solid rgb(63, 37, 141)' });
+      } else {
+        applySize(sectionId, { width: '40vw', height: '35vh', border: '1px solid rgb(63, 37, 141)' });
+      }
+    });
+  };
+
+  portSectionTitles.forEach((h5) => {
+    h5.addEventListener('click', () => {
+      const sectionId = sections[h5.id];
+      if (!sectionId) return;
+
+      if (clicked !== null) {
+        resetAll();
+        clicked = null;
+        return;
+      }
+
+      clicked = h5.id;
+      if (isMobile()) {
+        applySize(sectionId, { width: '80vw', height: '70vh' });
+      } else {
+        applySize(sectionId, { width: '70vw', height: '70vh' });
+      }
+
+      portSectionTitles.forEach((other) => {
+        if (other.id === clicked) return;
+        const otherSectionId = sections[other.id];
+        if (!otherSectionId) return;
+        applySize(otherSectionId, { width: '0vh', height: '0vh', border: '0' });
+      });
     });
   });
 
+  resetAll();
+});

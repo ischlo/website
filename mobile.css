@@ -49,6 +49,10 @@
         /* padding: 10px; */
     }
 
+    .portfolio_section_content{
+        grid-template-columns: 1fr !important;
+    }
+
 }
 
 
