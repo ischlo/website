@@ -42,15 +42,34 @@
         width: 80vw !important;
     }
 
-    .about_element, .portfolio_section, .news_container, .blog_container {
+    .about_element, .news_container, .blog_container {
         width: 80vw !important;
         /* height: auto !important; */
         scroll-snap-align: start;
         /* padding: 10px; */
     }
 
-    .portfolio_section_content{
+    .portfolio_section {
+        width: 92vw !important;
         grid-template-columns: 1fr !important;
+        gap: 10px !important;
+    }
+
+    .portfolio_section_label {
+        width: 100%;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        padding: 0 4vw !important;
+    }
+
+    .portfolio_section_content{
+        width: 100% !important;
+        padding: 8px 4vw 16px 4vw !important;
+    }
+
+    .portfolio_post{
+        flex-basis: 78vw !important;
     }
 
 }

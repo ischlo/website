@@ -183,102 +183,85 @@ hr {
 /* PROTFOLIO SECTION */
 
 .portfolio_sections_pane{
-    width: 80vw;
-    height: 80vh;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 5px;
-    margin: 5px;
+    width: min(1480px, 98vw);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 0;
+    margin: 0 auto;
 }
 
 .portfolio_section{
-    bottom: 0;
-    width: 40vw;
-    position: relative;
-    height: 35vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    margin: 5px;
-    background-color:rgb(255, 251, 250);
-    border: 1px solid rgb(63, 37, 141);
-    justify-items: center;
-    /* Ensure sticky children behave consistently while scrolling */
-    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
+    gap: 18px;
+    align-items: stretch;
+    background-color: transparent;
+    margin: 0;
 }
 
-.section_name{
-    background-color: white;
-}
-
-#portfolio_title{
-    margin: 5px;
-}
-
-.portfolio_section_blurry {
-    width: 120%;
-    height: 60px;
-    top: 0;
-    background-color: rgb(255, 251, 250);
-    position: -webkit-sticky;
-    position: sticky;
-    filter: blur(10px);
-    -webkit-filter: blur(5px);
-    opacity: 1;
-    z-index: 10;
-    pointer-events: none;
-}
-
-.portfolio_section_title{
+.portfolio_section_label{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    color: midnightblue;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 12px 18px;
+    border-radius: 12px;
+    white-space: nowrap;
+    align-self: start;
+}
+
+.portfolio_section_label h3{
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.portfolio_section_label .bi{
     width: auto;
-    height: 10%;
-    top: 0;
-    opacity: 1;
-    position:sticky;
-    position: -webkit-sticky;
-    background-color: rgb(255, 251, 250);
-    padding: 3px;
-    z-index: 11;
+    height: auto;
+    font-size: 1.2rem;
 }
 
 .portfolio_section_content{
     width: 100%;
-    height: 100%;
-    /* display: grid; */
-    /* align-items: flex-start;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: min-content;
-    gap: 10px; */
-    display: block;
-    column-count: 2;
-    column-gap: 10px;
-    z-index: 9;
-    padding: 8px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 8px 6px 16px 6px;
+    scrollbar-gutter: stable;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
 }
 
 .portfolio_post{
     border: 1px solid rgba(0,0,0,0.25);
-    background-color: rgb(255, 251, 250);
-    /* display: grid; */
-    grid-template-rows: auto auto auto;
-    align-items: center;
-    justify-items: center;
-    text-align: center;
+    background-color: rgba(255, 251, 250, 0.96);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
     font-size: smaller;
-    width: 100%;
-    height: auto;
-    break-inside: avoid;
-    -webkit-column-break-inside: avoid;
-    page-break-inside: avoid;
-    display: inline-block;
-    vertical-align: top;
-    margin: 0 0 10px 0;
+    flex: 0 0 clamp(240px, 30vw, 320px);
+    min-height: 180px;
+    margin: 0;
     padding: 10px 10px 36px 10px;
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    /* box-shadow: 8px 20px rgba(0,0,0,0.08); */
+    box-shadow: 0 8px 20px rgba(18, 24, 38, 0.14);
+    scroll-snap-align: start;
 }
 
 .portfolio_post h6{
@@ -310,7 +293,7 @@ hr {
     height: min-content;
     text-align: right;
     z-index: 10;
-    background: rgba(255, 255, 255, 0.65);
+    background: rgba(255, 255, 255, 0.85);
     border: 1px solid rgba(0,0,0,0.08);
     border-radius: 8px;
     backdrop-filter: blur(6px);
